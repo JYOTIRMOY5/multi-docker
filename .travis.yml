@@ -11,10 +11,8 @@ after_sucess:
   - docker build -t 2210199/multi-server ./server
   - docker build -t 2210199/multi-worker ./worker
 
-#login to docker hub
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-#now push in dockerhub
 - docker push 2210199/multi-client
 - docker push 2210199/multi-nginx
 - docker push 2210199/multi-server
